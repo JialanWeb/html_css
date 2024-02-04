@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'LatoWeb';
+    src: url('../fonts/Lato-Regular/Lato-Regular.eot'); 
+    src:local('Latoweb'),
+    url('../fonts/Lato-Regular/Lato-Regular.eot?#iefix') format('fonts/embedded-opentype'), 
+    url('../fonts/Lato-Regular/Lato-Regular.woff2') format('woff2'), 
+    url('../fonts/Lato-Regular/Lato-Regular.woff') format('woff'), 
+    url('../fonts/Lato-Regular/Lato-Regular.ttf') format('truetype'),
+    url('../fonts/Lato-Regular/Lato-Regular.svg#LatoWeb') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'LatoWebBold';
+    src: url('../fonts/Lato-Bold/Lato-Bold.eot'); 
+    src:local('LatoWebBold'),
+    url('../fonts/Lato-Bold/Lato-Bold.eot?#iefix') format('fonts/embedded-opentype'), 
+    url('../fonts/Lato-Bold/Lato-Bold.woff2') format('woff2'), 
+    url('../fonts/Lato-Bold/Lato-Bold.woff') format('woff'), 
+    url('../fonts/Lato-Bold/Lato-Bold.ttf') format('truetype'),
+    url('../fonts/Lato-Bold/Lato-Bold.svg#LatoWebBold') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}

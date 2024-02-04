@@ -1,0 +1,70 @@
+.flex{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+nav ul{
+  list-style:none;padding:0;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+} 
+
+span[id]{
+  display:none;
+}
+
+.clear{clear:both;}
+
+.fl-l{float:left;}
+
+.fl-r{float:right;}
+
+.clearfix:after{
+    content:"";
+    display:table;
+    clear:both;}
+
+.col-30{
+  --col:30%;
+  width:var(--col);
+}
+.col-33{
+  --col:33.3333%;
+  width:var(--col);
+}
+
+.col-40{
+  --col:40%;
+  width:var(--col);
+}
+
+.col-50{
+  --col:50%;
+  width:var(--col);
+}
+.col-60{
+  --col:60%;
+  width:var(--col);
+}
+
+.col-70{
+  --col:70%;
+  width:var(--col);
+}
+
+.col-100{
+  --col:100%;
+  width:var(--col);
+}
+
+img{
+  display:inline-block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}

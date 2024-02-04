@@ -1,0 +1,63 @@
+:root{
+  --color1:#8AAAE5; 
+  --color2:#CBB26A;
+  --color3:#FAF2EC;
+  --color4:#FCF6F5;
+  --color5:#505762;
+  --color6:#F4F4F4;
+  --color7:#000;
+  --color8:#fff;
+
+
+  --default-font:'Courier New', Courier, monospace;
+  --font1:'LatoWeb';
+  --font2:'LatoWebBold';
+
+  --theme-color1:var(--color1);
+  --theme-color2:var(--color2);
+  --bg-color1:var(--color1);
+  --bg-color2:var(--color2);
+  --bg-color3:var(--color3);
+  --bg-color4:var(--color4);
+  --text-color1:var(--color5);
+  --text-color3:var(--color7);
+ 
+
+  --page-font:var(--font1);
+  --heading-font:var(--font2);
+  --heading1-color:var(---theme-color1);
+  --heading2-color:var(--theme-color2);
+  --header--bg-color:var(--theme-color1)
+  --footer--bg-color:var(--theme-color1)
+  --link-hov-bg:var(--theme-color2);
+
+  --font-size1:1em;
+  --font-size2:1.2em;
+  --font-size3:1.5em;
+  --font-size4:1.8em;
+  --heading1-font-size:var(--font-size4);
+  --heading2-font-size:var(--font-size3);
+  --page-font-size:var(--font-size1)
+} 
+
+ html{
+  font-family:var(--page-font,var(--default-font));
+  /* font-size:var(--page-font-size);
+  color:var(--text-color5); */
+ } 
+
+h1{
+  font-family:var(--heading-font,var(--default-font));
+  font-size:var(--heading1-font-size, 2em);
+  color:var(--heading1-color,var(--default-color));
+} 
+
+h2{
+  font-family:var(--heading-font,var(--default-font));
+  font-size:var(--heading2-font-size, 1.5em);
+  color:var(--heading2-color,var(--default-color));
+} 
+
+header,footer{
+  background:var(--bg-color1);
+}

@@ -1,0 +1,291 @@
+@media all and (max-width:1400px){
+
+    /*********main navigation*****/
+    .main-menu>li>a{
+        padding:1em 1.2em;
+        font-size:1.3em;
+    }
+
+    .main-menu>li:hover>.sub-menu,
+    .main-menu>li:focus-within>.sub-menu{
+        font-size:1.2em;
+        width:200px;
+    } 
+
+    /********bg-picture********/
+    .bg-picture{
+        width:100%;
+        height:600px;
+    }
+
+    /********index:article****/
+    .text-container h2{
+        font-size:1.6em;
+    }
+    .text-container p{
+        font-size:1.2em;
+    }
+}
+   
+
+
+@media all and (max-width:1250px){
+
+    /*********main navigation*****/
+    .main-menu>li>a{
+        padding:1em 0.8em;
+        font-size:1.2em;
+    }
+    /********bg-picture********/
+    .bg-picture{
+        width:100%;
+        height:500px;
+    }
+
+    /********index:tabreiter***/
+    .tabreiter{
+        width:70%;
+    }
+
+    /********index:article****/
+    .article{
+        height:250px;
+    }
+
+    .article img{
+        height:100%;
+    }
+
+    .text-container{
+        height:250px;
+    }
+    .text-container h2{
+        font-size:1.4em; 
+    }
+
+    .text-container p{
+        font-size:1em;
+    }
+
+    /*******karriere + Kontakt******/
+    .form-wrapper div.col-33{
+    width:100%;
+    }
+}
+   
+
+
+@media all and (max-width:1050px){
+
+    /*********main navigation:hamburger*****/
+    .main-menu{display:block;}
+
+    .main-nav  .open{display:block;}
+
+    .main-nav  .main-menu{display:none;}
+
+    .main-nav  .open:target ~ ul{display:block;}
+
+    .main-nav  .open:target{display:none;}
+
+    .main-nav  .open:target~.close{display:block;}
+
+    .submenu{display:none;}
+    
+    .main-menu{
+        position:absolute;
+        top:120px;
+        width:100%;
+    }
+
+    .main-menu>li a{
+        display:block;
+        padding:0;
+        margin:0;
+        color:#505762;
+        background:#ffffff;
+        border-bottom:1px solid #8AAAE5;
+        width:100%;
+    }
+
+    .main-menu>li a:hover{
+        color:#505762;
+        background:#CBB26A;
+    }
+    
+    .sub-menu{display:none;}
+
+    .main-nav  .open, 
+    .main-nav  .close{
+        font-size:2em;
+    }
+
+    .main-nav .fa-bars,
+    .main-nav .fa-xmark{
+        color:#CBB26A;
+        display:block;
+        width:50px;
+        position:absolute;
+        right:0;
+        top:40px;
+    }
+
+    /********bg-picture********/
+    .bg-picture{
+        width:100%;
+        height:400px;
+    }
+
+    .bg-picture h2{
+        font-size:2em;
+        top:200px;
+    }
+
+    /********index:tabreiter***/
+    .tabreiter{
+        width:100%;
+    }
+
+    /********index:article****/
+    .article{
+        width:100%;
+        max-width:750px;
+        height:auto;display:block;
+    }
+
+    .article img{
+        width:100%;
+    }
+
+    .text-container{
+        width:100%;height:auto;
+    }
+
+    .text-container p{
+        margin-bottom:20px;
+    }
+
+    /*********individualreisen:section*****/
+    .travel-wrapper .col-25{      
+        width:calc(50% - 1% - 2px);
+    }
+
+    .travel-wrapper .col-50{      
+        width:calc(100% - 1% - 2px);
+    }
+
+    /*************über uns*********/
+    .describe-page .col-50{
+        padding:1%;
+        width:calc(100% - 2%);
+    }
+}
+
+
+
+@media all and (max-width:750px){
+
+    /********bg-picture********/
+    .bg-picture{
+        width:100%;
+        height:350px;
+    }
+
+    /********index:tabreiter***/
+    .tabreiter{
+        width:100%;
+        position:relative;
+        top:0px;
+        font-size:0.7em;
+        margin-bottom:30px;
+    }
+
+    .tabreiter section p{
+        padding:1em;
+    }
+    
+    .tabreiter .col-70{
+        width:100%;
+        height:40px;
+    }
+
+    .tabreiter .col-30{
+        width:100%;
+        height:15px;
+    }
+
+    .tabreiter .button{
+        width:100%;
+        height:30px;
+        position:relative;
+        left:-40px;
+        font-size:1.5em;
+        text-align:center;
+        border-radius:0;
+    }
+
+    /*********individualreisen:section*****/
+    .travel-wrapper .flex{
+        min-height:600px;
+    }
+
+    .travel-wrapper article.col-50 img{
+        width:100%;
+    }
+
+    .travel-wrapper article.col-50 div{
+        width:100%;
+    }
+
+    /************fotoshooting*********/
+    .photo-wrapper .col-40{
+        width:100%;
+    }
+
+    .photo-wrapper .col-60{
+        width:100%;
+    }
+
+    /**********geschäftscooperation****/
+    th, td {
+        padding:5px;}
+
+    /********Karriere+Kontaktformular***/
+    .form-wrapper .button{
+        float:none;
+    }
+}
+
+
+      
+@media all and (max-width:500px){
+
+    /*********individualreisen:section*****/
+    .travel-wrapper .col-25{      
+        width:calc(100% - 1% - 2px);
+    }
+
+    /************fotoshooting*********/
+    .photo-wrapper .fl-r{
+        float:none;
+    }
+    figure + img{
+        display:none;
+    }
+
+    /**********geschäftscooperation****/
+    th, td {
+        padding:0;
+        font-size:0.8em;
+    }
+
+    /*******karriere + Kontakt******/
+    summary{
+        font-size:1em;
+    }
+
+    input[type="reset"],
+    input[type="submit"]{
+        font-size:0.8em;
+    }
+}

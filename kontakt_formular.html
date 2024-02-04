@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt uns!</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/raster.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <img src="img/logo.png" alt="logo">
+        <div>
+        <a href="index.html" class="button">Zurück zur Startseite</a>
+        <a href="#dokumente" class="button fl-r">Jetzt Kontaktformular ausfüllen!</a>
+        <h1>Kontaktformular ausfüllen!</h1>
+        <p>"Grundinformationen" sind Pflichtangaben，dann bitte füllen Sie die andere entsprechenden Felder gemäß Ihrem Anliegen aus.<br> Klicken Sie auf den Menüpunkt, um das Formular zu öffnen.<br> Nachdem Sie das Formular ausgefüllt haben, denken Sie daran, auf "Datei senden" zu klicken.<br>Hinweis: Felder mit einem "<span>*</span>" sind Pflichtfelder.</p>
+        </div>
+        <form method="POST" action="php/ausgabe_kontaktformular.php" enctype="multipart/form-data">
+        <details>
+            <summary style="background:#CBB26A">Grundinformationen</summary>
+            <div>
+                <p>Bitte vervollständigen Sie Ihre persönlichen Informationen.</p>
+                <div class="flex">
+                    <div class="col-33">
+                        <label for="anrede">Auswählen Ihre Anrede</label><br>
+                            <select name="anrede" id="anrede" >
+                                <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                                <option value="Herr">Herr</option>
+                                <option value="Frau">Frau</option>
+                            </select>
+                    </div>
+                    <div class="col-33">
+                        <label for="Vorname"><span>*</span>Vorname</label><br>
+                        <input type="text" id="Vorname" name="Vorname"  autofocus required> <br>
+                    </div>
+                    <div class="col-33">
+                        <label for="Nachname"><span>*</span>Nachname</label><br>
+                        <input type="text" id="Nachname" name="Nachname" required> <br>
+                    </div>
+                    <div class="col-33">
+                        <label for="email"><span>*</span>Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="bitte im Format bla@muster eingeben" required>  <br>
+                    </div>
+                    <div class="col-33">
+                        <label for="telephone"><span>*</span>Telefon</label><br>
+                        <input type="tel" id="telephone" name="telephone"  placeholder="0179-6666-666" pattern="[0-9]{4}-[0-9]{4}-[0-9]{3}" required>
+                    </div>
+                    <div class="col-33">
+                        <p>Wie dürfen wir mit Ihnen Kontakt aufnehmen?(Mehrfachauswahl)</p>
+                        <input type="checkbox" id="Telefon" name="Kontakt uns" value="Telefon" checked> 
+                        <label for="Telefon">Telefon</label><br>
+                        <input type="checkbox" id="Email" name="Kontakt uns" value="Email">
+                        <label for="Email">Email</label><br>
+                        <input type="checkbox" id="Brief" name="Kontakt uns" value="Brief">
+                        <label for="Brief">Brief</label><br>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details>
+            <summary>Individualreisen</summary>
+            <div>
+                <p>Bitte vervollständigen Sie Ihre persönlichen Informationen.</p>
+                <div class="flex">     
+                    <div class="col-33">
+                        <label for="Reiseort">Haben Sie bereits einen gewünschtes Reiseort?</label><br>
+                            <select name="Reiseort" id="Reiseort">
+                                <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                                <option value="Euorpa">Europa</option>
+                                <option value="Asien">Asien</option>
+                                <option value="Oziannien">Ozianien</option>
+                                <option value="Anderes">Sonstiges</option>
+                                <option value="Kein Ziel">Kein Ziel</option>
+                            </select>
+                    </div>
+                    <div class="col-33">
+                        <label for="Anzahl_der_Reisenden">Wie viele Personen werden reisen?</label><br>
+                            <select name="Anzahl_der_Reisenden" id="Anzahl_der_Reisenden">
+                                <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                                <option value="1">nur 1</option>
+                                <option value="2">2</option>
+                                <option value="3-5">3-5</option>
+                                <option value="Mehr als 5">Mehr als 5</option>
+                            </select>
+                    </div>
+                    <div class="col-33">
+                        <label for="Reisebudget">Wie hoch ist das Reisebudget pro Person in Euro??</label><br>
+                            <select name="Reisebudget" id="Reisebudget">
+                                <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                                <option value="0~500">0~500</option>
+                                <option value="500~1000">500~1000</option>
+                                <option value="1000~1500">1000~1500</option>
+                                <option value="1500~2000">1500~2000</option>
+                                <option value=">2000">mehr als 2000</option>
+                            </select>
+                    </div>
+                    <div class="col-100">
+                        <label for="Individualreisen_Meinungen">Möchten Sie noch etwas sagen? Bitte eingeben hier:</label> <br>
+                        <textarea id="Individualreisen_Meinungen" name="Individualreisen_Meinungen" rows="6"></textarea> 
+                    </div>
+              </div>
+            </div>
+        </details>
+        <details>
+            <summary>Fotoshooting</summary>
+            <div>
+                <p>Bitte vervollständigen Sie Ihre persönlichen Informationen.</p>
+                <div class="flex">
+                    <div class="col-33">
+                        <label for="Kostümrequisiten_Miete">Benötigen Sie von uns Kostümrequisiten zur Miete?</label><br>
+                            <select name=" Kostümrequisiten_Miete" id="Kostümrequisiten_Miete" >
+                                <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                                <option value="mieten">Ja</option>
+                                <option value="nicht mieten">Nein</option>
+                            </select>
+                    </div>
+                    <div class="col-33">
+                        <label for="Shootingdatum">Haben Sie gewünschte Fotoshooting Datum?</label><br>
+                            <select name="Shootingdatum_ja_order_nein" id="Shootingdatum_ja_oder_nein">
+                                <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                                <option value="Ja">Ja</option>
+                                <option value="Nein">Nein</option>
+                            </select>
+                    </div>
+                    <div class="col-33">
+                        <label for="Shootingdatum">Shootingdatum</label><br>
+                        <input type="date" id="Shootingdatum" name="Shootingdatum"> 
+                    </div>
+                    <div class="col-33">
+                        <label for="Shootingduration">Wie lange ist die Shootingduration?</label><br>
+                            <select name="Shootingduration" id="Shootingduration">
+                                <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                                <option value="Weniger als 1h">Weniger als 1h</option>
+                                <option value="1-2h">1-2h</option>
+                                <option value="Halb Tag">Halb Tag</option>
+                                <option value="1 Tag">1 Tag</option>
+                                <option value="Sonstiges">Sonstiges</option>
+                            </select>
+                    </div>
+                    <div class="col-33">
+                        <p>Welche Typ von Fotos möchten Sie machen?</p>
+                        <input type="checkbox" id="Hochzeiten" name="Fototyp" value="Hochzeiten"> 
+                        <label for="Hochzeiten">Hochzeit</label><br>
+                        <input type="checkbox" id="Neugeborenenfotos" name="Fototyp" value="Neugeborenenfotos">
+                        <label for="Neugeborenenfotos">Neugeborenenfotos</label><br>
+                        <input type="checkbox" id="Schwangerschaft" name="Fototyp" value="Schwangerschaft">
+                        <label for="Famielie,kinder,paare">Schwangerschaft</label><br>
+                        <input type="checkbox" id="Famielie,kinder,paare" name="Fototyp" value="Famielie,kinder,paare"> 
+                        <label for="Famielie,kinder,paare">Famielie,kinder,paare</label><br>
+                        <input type="checkbox" id="Personen_und_Geschäftsportrait" name="Fototyp" value="Personen_und_Geschäftsportrait">
+                        <label for="Personen_und_Geschäftsportrait">Personen-und Geschäftsportrait</label><br>
+                        <input type="checkbox" id="Eventfotografie" name="Fototyp" value="Eventfotografie">
+                        <label for="Eventfotografie">Eventfotografie</label><br>
+                        <input type="checkbox" id="Fototyp_Sonstiges" name="Fototyp" value="Fototyp_Sonstiges">
+                        <label for="Fototyp_Sonstiges">Sonstiges</label><br>
+                    </div>
+                    <div class="col-33">
+                        <fieldset>
+                            <legend>Fotoshooting Adresse:</legend>
+                            <label for="Straße">Straße:</label>
+                            <input type="text" id="Straße" name="Straße"> <br>
+                            <label for="Hausnummer">Hausnummer</label>
+                            <input type="text" id="Hausnummer" name="Hausnummer"  maxlength="4" size="4"> <br>
+                            <label for="Postleitzahl">PLZ</label>
+                            <input type="text" id="Postleitzahl" name="Postleitzahl" pattern=[0-9]{5} required maxlength="5" inputmode="numeric"> <br> 
+                            <label for="Stadt">Stadt</label>
+                            <input type="text" id="Stadt" name="Stadt"> <br>
+                        </fieldset>
+                    </div>
+                    <div class="col-100">
+                        <label for="Fotoshooting_Meinungen">Möchten Sie noch etwas sagen? Bitte eingeben hier:</label> <br>
+                        <textarea id="Fotoshooting_Meinungen" name="Fotoshooting_Meinungen" rows="6"></textarea> 
+                    </div>
+              </div>
+            </div>
+        </details>
+        <details>
+            <summary>Geschäftescooperation</summary>
+            <div>
+                <p>Bitte vervollständigen Sie Ihre persönlichen Informationen.</p>
+                <div class="flex">
+                    <div class="col-33">
+                        <p>Welchen Produktbereich handelt es sich bei Ihrer Promotion?</p>
+                        <input type="checkbox" id="Lebensmittel" name="Produktbereich" value="Lebensmittel"> 
+                        <label for="Lebensmittel">Lebensmittel</label><br>
+                        <input type="checkbox" id="Kosmetik" name="Produktbereich" value="Kosmetik"> 
+                        <label for="Kosmetik">Kosmetik</label><br>
+                        <input type="checkbox" id="Reisenort" name="Produktbereich" value="Reisenort"> 
+                        <label for="Reisenort">Reisenort</label><br>
+                        <input type="checkbox" id="Restaurant" name="Produktbereich" value="Restaurant"> 
+                        <label for="Restaurant">Rerstaurant</label><br>
+                        <input type="checkbox" id="Hotel" name="Produktbereich" value="Hotel"> 
+                        <label for="Hotel">Hotel</label><br>
+                        <input type="checkbox" id="Produktbereich_Sonstiges" name="Produktbereich" value="Produktbereich_Sonstiges"> 
+                        <label for="Produktbereich_Sonstiges">Sonstiges</label><br>
+                    </div>
+                    <div class="col-33">
+                        <p>Welche Verbreitungsplattformen möchten Sie auswählen?</p>
+                        <input type="checkbox" id="Youtube" name="Verbreitungsplattform" value="Youtube"> 
+                        <label for="Youtube">Youtube</label><br>
+                        <input type="checkbox" id="Instagram" name="Verbreitungsplattform" value="Instagram"> 
+                        <label for="Instagram">Instagram</label><br>
+                        <input type="checkbox" id="Tiktok" name="Verbreitungsplattform" value="Tiktok"> 
+                        <label for="Tiktok">Tiktokr</label><br>
+                        <input type="checkbox" id="Facebook" name="Verbreitungsplattform" value="Facebook"> 
+                        <label for="Facebook">Facebook</label><br>
+                        <input type="checkbox" id="Verbreitungsplattform_Sonstiges" name="Verbreitungsplattform" value="Verbreitungsplattform_Sonstiges"> 
+                        <label for="Verbreitungsplattform_Sonstiges">Sonstiges</label><br>
+                    </div>
+                    <div class="col-33">
+                        <p>Welche Art von Werbung möchten Sie?</p>
+                        <input type="checkbox" id="Fotos" name="Werbungsart" value="Fotos"> 
+                        <label for="Fotos">Fotos</label><br>
+                        <input type="checkbox" id="Videos" name="Werbungsart" value="Videos"> 
+                        <label for="Videos">Video</label><br>
+                        <input type="checkbox" id="Fotos+Videos" name="Werbungsart" value="Fotos+Videos"> 
+                        <label for="Fotos+Videos">Fotos+Videos</label><br>
+                    </div>
+                    <div class="col-100">
+                        <label for="Geschäftescooperation_Meinungen">Möchten Sie noch etwas sagen? Bitte eingeben hier:</label> <br>
+                        <textarea id="Geschäftescooperation_Meinungen" name="Geschäftescooperation_Meinungen" rows="6"></textarea> 
+                    </div>
+              </div>
+            </div>
+        </details>
+        <input type="reset" value="wieder einfüllen">
+        <input type="submit" value="Datei senden">
+      </form>
+      </div>
+    </body>
+    </html>
